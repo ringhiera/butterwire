@@ -1,0 +1,43 @@
+; config.ini
+[DEFAULT]
+CASSANDRA_CONTACT_POINTS = ['127.0.0.1'] 
+CASSANDRA_USER = <default-cassandra-user> 
+CASSANDRA_PASSWORD = <default-cassandra-password>
+QUANDL_KEY = <default-quandl-key>
+MONGO_HOST = mongodb://mongo-user:mongo-password@localhost.com:27017/
+MONGO_DB = timeseries
+TS_NAME = LME/PR_CO
+
+[TEST]
+CASSANDRA_CONTACT_POINTS = ['192.168.0.10'] 
+CASSANDRA_USER = 'test-cassandra-user' 
+CASSANDRA_PASSWORD = 'test-cassandra-password'
+QUANDL_KEY = <test-quandl-key>
+MONGO_HOST = mongodb://test-mongo-user:test-mongo-password@192.168.0.30:27017/
+MONGO_DB = timeseries
+TS_NAME = LME/PR_CO
+
+[CI]
+CASSANDRA_CONTACT_POINTS = ['192.168.64.10','192.168.64.11','192.168.64.12'] 
+CASSANDRA_USER = <ci-cassandra-user> 
+CASSANDRA_PASSWORD = <ci-cassandra-password>
+QUANDL_KEY = <ci-quandl-key>
+MONGO_HOST = mongodb://ci-mongo-user:ci-mongo-password@192.168.64.30:27017/
+MONGO_DB = timeseries
+TS_NAME = LME/PR_CO
+
+[SIT]
+; if needed
+
+[UAT]
+; if needed
+
+[PROD]
+CASSANDRA_CONTACT_POINTS = ['10.0.6.10','10.0.6.11','10.0.6.12'] 
+CASSANDRA_USER = <prod-cassandra-user>
+CASSANDRA_PASSWORD = <prod-cassandra-password>
+QUANDL_KEY = <prod-quandl-key>
+MONGO_HOST = mongodb://prod-mongo-user:prod-mongo-password@10.0.6.30:27017/
+MONGO_DB = timeseries
+TS_NAME = LME/PR_CO
+
